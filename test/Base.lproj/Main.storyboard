@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WK0-VT-0KP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Danh sach Hinh anh-->
+        <scene sceneID="ICl-76-ACR">
+            <objects>
+                <collectionViewController id="xxa-NM-Duj" customClass="LayoutController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PEC-4q-chB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QKg-Wc-15n">
+                            <size key="itemSize" width="251" height="591"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collCell" id="rve-EP-ayF" customClass="CollectionViewCell" customModule="test" customModuleProvider="target">
+                                <rect key="frame" x="62" y="64" width="251" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="251" height="591"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pin5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-zJ-kmQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="251" height="419"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohf-E4-C6q">
+                                            <rect key="frame" x="25" y="506" width="201" height="44"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.36584535256410255" green="0.36584535256410255" blue="0.36584535256410255" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Yf2-zJ-kmQ" firstAttribute="leading" secondItem="rve-EP-ayF" secondAttribute="leading" id="7ua-gm-Zwe"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ohf-E4-C6q" secondAttribute="trailing" id="8Xx-kG-b2K"/>
+                                    <constraint firstItem="Yf2-zJ-kmQ" firstAttribute="top" secondItem="rve-EP-ayF" secondAttribute="top" id="Gtr-6V-wHm"/>
+                                    <constraint firstItem="Ohf-E4-C6q" firstAttribute="top" secondItem="Yf2-zJ-kmQ" secondAttribute="bottom" id="Hdc-2y-N13"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yf2-zJ-kmQ" secondAttribute="trailing" id="Sh7-fy-zsS"/>
+                                    <constraint firstItem="Ohf-E4-C6q" firstAttribute="leading" secondItem="rve-EP-ayF" secondAttribute="leading" id="cEl-Nh-ETm"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ohf-E4-C6q" secondAttribute="bottom" id="l9W-lu-wKv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="pinImage" destination="Yf2-zJ-kmQ" id="ZJx-Om-hgj"/>
+                                    <outlet property="title" destination="Ohf-E4-C6q" id="9kx-ZF-i3T"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="xxa-NM-Duj" id="DLx-Da-f8h"/>
+                            <outlet property="delegate" destination="xxa-NM-Duj" id="aRy-vw-trO"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Danh sach Hinh anh" id="3tp-cn-pb6"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQK-ky-2eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116.5" y="385.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ese-o7-OLU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WK0-VT-0KP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZq-V3-9e6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xxa-NM-Duj" kind="relationship" relationship="rootViewController" id="NNB-zi-D0U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rx8-CG-q6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="385"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pin5.jpg" width="500" height="750"/>
+    </resources>
+</document>
